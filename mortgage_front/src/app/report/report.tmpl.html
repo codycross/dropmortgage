@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/tables-min.css">
+<div layout="column" layout-align="center center" class="widget">
+    <div flex style="padding-top:40px;">
+        <h3>Prequalification Request</h3>
+    </div>
+    <!--     <div flex class="hide-gt-xs">
+        <h4>Report generation in process</h4>
+        <p>We will notify you via email
+            <br>when your quote is ready!</p>
+    </div>
+ -->
+    <div flex layout-align="center center" id="quick_quote_requirements" class="">
+        <md-progress-circular ng-if="$ctrl.loadingView" md-mode="indeterminate"></md-progress-circular>
+        <div ng-show="!$ctrl.loadingView">
+            <table class="center non-responsive">
+                <thead class="row">
+                    <tr>
+                        <td colspan="4" style="text-align:center;background-color: #308ED4;color: #FFFFFF;width:100%;font-size: 1.5em;padding:12px;">LOAN OPTIONS</td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <th>Program</th>
+                            <th>LTV Requested</th>
+                            <th>Max LTV</th>
+                            <th>Rate * </th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="program in $ctrl.report.programs">
+                        <td>
+                            <span ng-bind="program.program | uppercase"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="program.ltv"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="program.maxLtv"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="$ctrl.prettyPercent(program.rate)"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="center responsive" ng-repeat="program in $ctrl.report.programs">
+                <thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" style="text-align:center;background-color: #308ED4;color: #FFFFFF;width:100%;font-size: 1.5em;    padding:12px;">LOAN OPTION</td>
+                        </tr>
+                        <tr>
+                            <td>LOAN PROGRAM</td>
+                            <td>
+                                <span ng-bind="program.program | uppercase"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>LTV REQUESTED</td>
+                            <td>
+                                <span ng-bind="program.ltv"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MAX LTV</td>
+                            <td>
+                                <span ng-bind="program.maxLtv"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RATE *</td>
+                            <td>
+                                <span ng-bind="$ctrl.prettyPercent(program.rate)"></span>
+                            </td>
+                        </tr>
+                        </tr>
+            </table>
+        </div>
+        <!-- VIEW ALL DATA BEING PULLED THROUGH -->
+        <!-- <div>
+            <table>
+                <tr ng-repeat="program in $ctrl.report.reportData.programs">
+                    <td>
+                        <span ng-bind="program|json"></span>
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+        <br/>
+        <tbody>
+            <tr>
+                <td>
+                    <h3>General Information</h3></td>
+                <td>
+                    <ul class="report-info">
+                        <li ng-repeat="program in $ctrl.report.programs">
+                            <span ng-show="program.program === 'Aurora'">
+                            Aurora specific text
+                        </span>
+                            <span ng-show="program.program === 'Highland'">
+                            Highland specific text
+                        </span>
+                            <span ng-show="program.program === 'OTHER'">
+                            OTHER specific text
+                        </span>
+                        </li>
+                        <!-- <li ng-show="$ctrl.displayOptions.program_fullDoc" id="program-FullDoc">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed.</li>
+                        <li ng-show="$ctrl.displayOptions.program_bankStmt" id="program-BankStmt">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed. Personal Bank Statement program. Borrowers must be Self Employed. Maximum one account allowed - qualifing income is the average of deposits over 24 months. Transfers only allowed from one business account into a personal account. Minimum loan amount for Bank Statement program is $150,000.
+                        </li>
+                        <li ng-show="$ctrl.displayOptions.program_businessBankStmt">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed. Business Bank Statements allowed - Profit and Loss required from a third party. Qualifing income is the net income reflected on the P&L. Gross deposits on business bank statements must be at least 90% of the gross receipts listed on the P&L. Only one bank account may be used. Minimum loan amount is $150,000.
+                        </li>
+                        <li ng-show="$ctrl.displayOptions.program_foreignNational">
+                            Foreign National program requires a 2 year prepay. 6 months interest on 80% unpaid principal balance (unless otherwise restricted by State law). Pre-pay Buyout: 1% fee for 1 year; 2% fee for &lt; 1 year.
+                        </li>
+                        <li ng-show="$ctrl.displayOptions.program_investment2" id="program-Investment2">
+                            Pricing on Spectrum (Investor) is for 1 and 2 unit properties ONLY. Contact your AE for pricing on 3 units, 4 units or Condos. Qualification is based on property cash flow (must be &lt;= 90%). Cash flow is calculated by dividing the PITIA (Principal + Interest + Taxes + Insurance + HOA) by Market Rents. Rural properties not eligible. Must meet Standard Tradeline requirements.
+                        </li>
+                        <li ng-show="$ctrl.displayOptions.program_investment" id="program-Investment">
+                            Investment properties requires a 2 year prepay. 6 months interest on 80% unpaid principal balance (unless otherwise restricted by State law). Pre-pay Buyout: 1% fee for 1 year; 2% fee for &lt; 1 year.
+                        </li> -->
+                        <!-- <li>Note: This quote is based on the borrower meeting the Standard Tradeline requirements. Need 3 tradelines reporting for a minimum of 12 months -OR- 2 tradelines reporting &gt; 24 months; all with activity in the last 12 months. Cancelled checks for 12 or 24 months housing history may also be used as a tradeline. Exceptions allowed on HIGHLAND program ONLY if the borrower does not meet these tradeline requirements. Reduce the max LTV by 5% (max LTV not to exceed 75%) and add 50bps to rate. Additional program restrictions may also apply, contact your Account Executive for details.
+                        </li> -->
+                        <li>Rates Quoted are estimates based on criteria selected. Please note rates are subject to change based on ability to provide documentation during underwriting process.</li>
+                        <!-- <li>Gift funds may not be allowed for Portfolio Select Combo. Please confirm with your AE.</li>-->
+                        <li>All rates/programs are subject to review and approval by your AE.</li>
+                    </ul>
+                </td>
+                <td>
+                    <span ng-bind="program.applicant.ltv"></span>
+                </td>
+                <td>
+                    <span ng-bind="program.program"></span>
+                </td>
+                <td>
+                    <span ng-bind="program.program"></span>
+                </td>
+            </tr>
+        </tbody>
+        <br/>
+        <div ng-show="$ctrl.displayOptions.quick_quote_requirements">
+            <table class="pure-table pure-table-bordered quick_quote_results_table">
+                <thead>
+                    <tr>
+                        <th>
+                            General Requirements
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left;">
+                            <ul>
+                                <li ng-show="$ctrl.displayOptions.program_fullDoc" id="program-FullDoc">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed.</li>
+                                <li ng-show="$ctrl.displayOptions.program_bankStmt" id="program-BankStmt">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed. Personal Bank Statement program. Borrowers must be Self Employed. Maximum one account allowed - qualifing income is the average of deposits over 24 months. Transfers only allowed from one business account into a personal account. Minimum loan amount for Bank Statement program is $150,000.
+                                </li>
+                                <li ng-show="$ctrl.displayOptions.program_businessBankStmt">Rate Quoted is for a 5/1 ARM, based on LTV requested if available - if N/A, rate is based on Max LTV. Add 0.50% to rate for 30 Year fixed. Business Bank Statements allowed - Profit and Loss required from a third party. Qualifing income is the net income reflected on the P&L. Gross deposits on business bank statements must be at least 90% of the gross receipts listed on the P&L. Only one bank account may be used. Minimum loan amount is $150,000.
+                                </li>
+                                <li ng-show="$ctrl.displayOptions.program_foreignNational">
+                                    Foreign National program requires a 2 year prepay. 6 months interest on 80% unpaid principal balance (unless otherwise restricted by State law). Pre-pay Buyout: 1% fee for 1 year; 2% fee for &lt; 1 year.
+                                </li>
+                                <li ng-show="$ctrl.displayOptions.program_investment2" id="program-Investment2">
+                                    Pricing on Spectrum (Investor) is for 1 and 2 unit properties ONLY. Contact your AE for pricing on 3 units, 4 units or Condos. Qualification is based on property cash flow (must be &lt;= 90%). Cash flow is calculated by dividing the PITIA (Principal + Interest + Taxes + Insurance + HOA) by Market Rents. Rural properties not eligible. Must meet Standard Tradeline requirements.
+                                </li>
+                                <li ng-show="$ctrl.displayOptions.program_investment" id="program-Investment">
+                                    Investment properties requires a 2 year prepay. 6 months interest on 80% unpaid principal balance (unless otherwise restricted by State law). Pre-pay Buyout: 1% fee for 1 year; 2% fee for &lt; 1 year.
+                                </li>
+                                <li>Note: This quote is based on the borrower meeting the Standard Tradeline requirements. Need 3 tradelines reporting for a minimum of 12 months -OR- 2 tradelines reporting &gt; 24 months; all with activity in the last 12 months. Cancelled checks for 12 or 24 months housing history may also be used as a tradeline. Exceptions allowed on HIGHLAND program ONLY if the borrower does not meet these tradeline requirements. Reduce the max LTV by 5% (max LTV not to exceed 75%) and add 50bps to rate. Additional program restrictions may also apply, contact your Account Executive for details.
+                                </li>
+                                <li>Rates Quoted are for 1 unit properties for all program except Investor Cash Flow. Rates for Investor Cash Flow are for 1 and 2 unit properties. Contact your AE for pricing on other property types.</li>
+                                <li>Gift funds may not be allowed for Portfolio Select Combo. Please confirm with your AE.</li>
+                                <li>All rates/programs are subject to review and approval by your AE.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

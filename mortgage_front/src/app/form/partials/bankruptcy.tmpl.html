@@ -1,0 +1,13 @@
+<div layout="column" layout-align="center center" class="widget center">
+	<div flex>
+		<h3>Have you had a bankruptcy or foreclosure/short sale in the last 7 years?</h3>
+	</div>
+	<md-input-container flex layout-align="center center">
+        <div flex layout-fill layout="column" layout-gt-sm="row" layout-align="space-between stretch" layout-align-xs="space-between start">
+            <button class="options-group md-primary md-raised md-button md-ink-ripple" ng-repeat="option in $ctrl.options" ng-click="$ctrl.updateSection(option.val,'bankruptcy')" aria-label='{{option.label}}'>
+                <i class="material-icons block">{{option.icon}}</i>
+                <h4>{{option.label}}</h4>
+            </button>
+        </div>
+    </md-input-container>
+</div>

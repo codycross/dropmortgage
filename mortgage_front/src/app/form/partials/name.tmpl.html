@@ -1,0 +1,22 @@
+<div layout="column" layout-align="stretch center" class="widget center">
+	<div flex="1 1" class="md-block">
+		<h3>
+			What is the borrower's name?
+		</h3>
+	</div>
+	<div flex="1 1" id="name" class="md-block" layout="column">
+		<md-input-container id="name" class="md-block">
+			<label>First Name</label>
+			<input md-autofocus required ng-model="$ctrl.firstName" >
+		</md-input-container>
+		<md-input-container id="name" flex class="md-block">
+			<label>Last Name</label>
+			<input required ng-model="$ctrl.lastName">
+		</md-input-container>
+		<md-input-container flex layout-align="center center" layout="row">
+			<md-button ng-disabled="!($ctrl.lastName&&$ctrl.firstName)" class="md-primary md-raised submit" type="submit" ng-click="$ctrl.save()" >Submit</md-button>
+		</md-input-container>
+	</div>
+
+
+</div>

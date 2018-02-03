@@ -1,0 +1,27 @@
+<div layout="column" class="widget center">
+	<div flex>
+		<h3>How much are you putting down as a down payment?</h3>
+		<h3 style="text-align: center"><span ng-bind="$ctrl.percentDown"></span>% Down</h3>
+	</div>
+	
+	<md-input-container flex>
+		
+		<md-slider-container >
+			
+			
+			<md-slider ng-change="$ctrl.updateSection()" flex
+					   min="{{$ctrl.inputSettings.min}}"
+					   max="{{$ctrl.inputSettings.max}}"
+					   md-discrete
+					   step="{{$ctrl.inputSettings.step}}"
+					   ng-model="$ctrl.percentDown"
+					   aria-label="{{$ctrl.inputSettings.label}}"
+					   id="{{$ctrl.inputSettings.id}}" class="md-primary">
+			</md-slider>
+		
+		</md-slider-container>
+	</md-input-container>
+	<div flex layout-align="center center" layout-fill layout="row">
+		<md-button  class="md-primary md-raised submit" type="submit" ng-click="$ctrl.save()">Submit</md-button>
+	</div>
+</div>

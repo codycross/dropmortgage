@@ -1,0 +1,20 @@
+
+<div layout="column" class="widget center">
+    <div flex>
+        <h3>How long ago was the bankruptcy?</h3>
+        <h3 style="text-align: center">
+		<span ng-if="$ctrl.years>0" ng-bind="$ctrl.years"></span>
+		<span ng-bind="$ctrl.years<1?'Less than 12 Months':$ctrl.years==7?'+ Years':'Years'">
+		</h3>
+    </div>
+    <md-input-container flex>
+        <md-slider-container>
+            <md-slider ng-change="$ctrl.updateSection()" flex min="{{$ctrl.inputSettings.min}}" max="{{$ctrl.inputSettings.max}}" md-discrete step="{{$ctrl.inputSettings.step}}" ng-model="$ctrl.years" aria-label="{{$ctrl.inputSettings.label}}" id="{{$ctrl.inputSettings.id}}" class="md-primary">
+            </md-slider>
+        </md-slider-container>
+    </md-input-container>
+    <div flex layout-align="center center" layout-fill layout="row">
+        <md-button class="md-primary md-raised submit" type="submit" ng-click="$ctrl.save()">Submit</md-button>
+    </div>
+
+</div>

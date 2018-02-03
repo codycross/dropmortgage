@@ -1,0 +1,16 @@
+<div layout="column" layout-align="start center" class="widget center">
+    <div flex>
+        <h3>
+			In which state will the property be located?
+		</h3>
+    </div>
+    <div flex="1 1" class="md-block" layout="column" style="width:100%;">
+        <md-input-container id="location" flex class="md-block ">
+            
+            <input md-autofocus ng-required="true" placeholder="State - Abbreviation (required)"  type="text" tabindex="1"  ng-model="$ctrl.dmData.propLoc">
+        </md-input-container>
+        <div flex layout-align="center center" flex layout="row">
+            <md-button tabindex="2" class="md-primary  submit" type="submit" ng-disabled="!$ctrl.dmData.propLoc" ng-click="$ctrl.save()" >Submit</md-button>
+        </div>
+    </div>
+</div>

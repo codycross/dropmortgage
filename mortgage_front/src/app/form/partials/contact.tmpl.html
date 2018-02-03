@@ -1,0 +1,29 @@
+<div layout="column" layout-align="start center" class="widget center">
+	<div flex="1 1" class="md-block">
+		<h3 class="md-headline">
+			Contact Info
+		</h3>
+	</div>
+	<div flex="1 1" id="contact" class="md-block" layout="column" style="width:100%; max-width:500px">
+		<md-input-container id="contact" flex="1 70" class="md-block">
+			<label>Email Address</label>
+			<input autofocus tabindex="1" type="email" ng-model="$ctrl.email" required ng-pattern="/^.+@.+\..+$/"/>
+			
+			<div class="hint"></div>
+		</md-input-container>
+		<md-input-container id="contact" flex class="md-block">
+			<label>Phone Number </label>
+			<input tabindex="2" type="text" name="field"  ng-model="$ctrl.phone" required ui-br-phone-number>
+			
+			<div class="hint"></div>
+		</md-input-container>
+		<div flex layout-align="center center" flex layout="row">
+			<md-button tabindex="3"  class="md-primary md-raised submit" type="submit" 
+					   ng-disabled="!($ctrl.phone&&$ctrl.email)"
+					   ng-click="$ctrl.save($event)">
+				Submit</md-button>
+		</div>
+	</div>
+
+
+</div>

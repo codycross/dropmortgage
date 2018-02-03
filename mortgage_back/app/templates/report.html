@@ -1,0 +1,41 @@
+
+<table>
+	<thead>
+	<tr>
+		<th>Program</th>
+		<th>LTV Requested</th>
+		<th>Max LTV</th>
+		<th>Rate * </th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	{% for program in programs %}
+	<tr>
+		<td>{{program.name | capitalize }}</td>
+		<td>{{program.applicant.ltv}} %</td>
+		<td>{{program.applicant.maxLtv}}</td>
+		<td>{{program.applicant.rate}}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+	
+	
+</table>
+<br><br>
+<table>
+	
+	<tbody>
+	{% for program in programs %}
+	{% for key,val in program %}
+	<tr>
+		<td>{{key}}</td>
+		<td>{{val}}</td>
+		
+	</tr>
+	{% endfor %}
+	{% endfor %}
+	</tbody>
+
+
+</table>

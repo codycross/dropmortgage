@@ -1,0 +1,18 @@
+<div layout="column" layout-align="center center" class="widget center">
+    <div flex>
+        <h3>What kind of Income Documentation can you provide?</h3>
+    </div>
+    <div flex="1 1" class="md-block" layout="column" style="width:100%; max-width:500px">
+        <md-input-container id="doc" class="md-block">
+            <label>Income Document</label>
+            <md-select ng-model="$ctrl.incomeDoc">
+                <md-optgroup id="doc" label="Documentation Options">
+                    <md-option class="doc-option" ng-value="option.val" ng-repeat="option in $ctrl.options">{{option.label}}</md-option>
+                </md-optgroup>
+            </md-select>
+        </md-input-container>
+        <div flex layout-align="center center" flex layout="row">
+            <md-button ng-disabled="!$ctrl.incomeDoc" class="md-primary md-raised submit" type="submit" ng-click="$ctrl.save()">Submit</md-button>
+        </div>
+    </div>
+</div>

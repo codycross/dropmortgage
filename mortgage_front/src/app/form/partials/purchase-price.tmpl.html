@@ -1,0 +1,15 @@
+<div layout="column" class="widget center">
+    <div flex>
+        <h3>What is the estimated value of property?</h3>
+        <h3 style="text-align: center">$<span ng-bind="$ctrl.displayPrice| number"></span></h3>
+    </div>
+    <md-input-container flex>
+        <md-slider-container>
+            <md-slider  tabindex="1" ng-change="$ctrl.updateSection()" min="{{$ctrl.inputSettings.min}}" max="{{$ctrl.inputSettings.max}}" md-discrete step="{{$ctrl.inputSettings.step}}" ng-model="$ctrl.sliderPrice" aria-label="{{$ctrl.inputSettings.label}}" id="{{$ctrl.inputSettings.id}}" class="md-primary">
+            </md-slider>
+        </md-slider-container>
+    </md-input-container>
+    <div layout-align="center center" flex layout="row">
+        <md-button class="md-primary md-raised submit" type="submit" ng-click="$ctrl.save()" >Submit</md-button>
+    </div>
+</div>

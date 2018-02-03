@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "local-mail": "nodemon ./index.js ",
+    "local": "nodemon ./index.js --nomail",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "express-validator": "^3.1.2",
+    "jade": "^1.11.0",
+    "joi": "^10.2.2",
+    "mailgun-js": "^0.8.2",
+    "morgan": "^1.8.1",
+    "nunjucks": "^3.0.0",
+    "premailer-api": "^1.0.4",
+    "sugar": "^2.0.4",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {}
+}

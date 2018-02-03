@@ -1,0 +1,247 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-06-22T20:41:47.917Z",
+	"__export_source": "insomnia.desktop.app:v5.3.6",
+	"resources": [
+		{
+			"_id": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"parentId": null,
+			"modified": 1488957984011,
+			"created": 1488957984011,
+			"name": "Drop Mortgage",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_b1e398c0275b45daa92611bb0731ee9b",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1488982923176,
+			"created": 1488982923176,
+			"name": "Base Environment",
+			"data": {},
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_e02a3275dafa4dadb775a9938be1332b",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1495617548997,
+			"created": 1488982923148,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_390b3c9400234283bd4c24080bc45ecd",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1498157650987,
+			"created": 1498157650987,
+			"name": "Aurora",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1498157650988,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_868fd1b3448a46d3a52603982402bcd1",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1498157664260,
+			"created": 1498157664260,
+			"name": "Highland",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1498157664260,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_3aeb980bb2d84ee3934f1714558e7bb1",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1498157675172,
+			"created": 1498157675172,
+			"name": "Both",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1498157675172,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_42abf7e941434dd395e0b88f9f5253b2",
+			"parentId": "wrk_25d4b599027c4f6cb4951be7bcbe94ff",
+			"modified": 1498157681777,
+			"created": 1498157681777,
+			"name": "None",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1498157681777,
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_8bc1c11b4a4948abb1fb2f3700453083",
+			"parentId": "env_b1e398c0275b45daa92611bb0731ee9b",
+			"modified": 1498147471758,
+			"created": 1489575476433,
+			"name": "Local",
+			"data": {
+				"base_url": "http://localhost:3030"
+			},
+			"_type": "environment"
+		},
+		{
+			"_id": "env_d10be40eb60d4f33b9853841b4540160",
+			"parentId": "env_b1e398c0275b45daa92611bb0731ee9b",
+			"modified": 1498147475120,
+			"created": 1498134099447,
+			"name": "Remote",
+			"data": {
+				"base_url": "https://shielded-woodland-47660.herokuapp.com"
+			},
+			"_type": "environment"
+		},
+		{
+			"_id": "req_9810ea97000247099fc9939e4b4394c7",
+			"parentId": "fld_390b3c9400234283bd4c24080bc45ecd",
+			"modified": 1498164010758,
+			"created": 1498134213927,
+			"url": "{{ base_url }}/report",
+			"name": "(B+|7365|80)",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"loanType\": \"PURCHASE\",\n\t\"housing_history\": \"0x60\",\n\t\"propType\": \"LOWRISECONDO\",\n\t\"propUse\": \"OwnerOccupied\",\n\t\"propLoc\": null,\n\t\"newHome\": null,\n\t\"ltv\": 75,\n\t\"loanTotal\": 1100000,\n\t\"foreign\": \"No\",\n\t\"realAgent\": null,\n\t\"realOpt\": null,\n\t\"purchasePrice\": 2000000,\n\t\"percentDown\": null,\n\t\"product\" : \"7/1\",\n\t\"creditRange\": 700,\n\t\"docType\": \"24MonthsBankStatements\",\n\t\"dob\": null,\n\t\"military\": null,\n\t\"bankruptcy\": null,\n\t\"bankruptcyInfo\": null,\n\t\"foreclosureInfo\": null,\n\t\"userAddress\": {\n\t\t\"street\": null,\n\t\t\"zip\": null,\n\t\t\"city\": null\n\t},\n\t\"name\": \"Test New\",\n\t\"contact\": {\n\t\t\"phone\": \"555-555-5555\",\n\t\t\"email\": \"testt@tester.com\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_c028fe52ff3f48b0bcd23914e5bfde9a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488982888406.75,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d9c42a24596048f8a7793e64d9764a2e",
+			"parentId": "fld_868fd1b3448a46d3a52603982402bcd1",
+			"modified": 1498163982205,
+			"created": 1498134186486,
+			"url": "{{ base_url }}/report",
+			"name": "(A+|6000|70)",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"loanType\": \"CASHOUT\",\n\t\"housing_history\": \"0x30\",\n\t\"propType\": \"LOWRISECONDO\",\n\t\"propUse\": \"OwnerOccupied\",\n\t\"propLoc\": null,\n\t\"newHome\": null,\n\t\"ltv\": 60,\n\t\"loanTotal\": 1000000,\n\t\"foreign\": \"No\",\n\t\"realAgent\": null,\n\t\"realOpt\": null,\n\t\"purchasePrice\": 2000000,\n\t\"percentDown\": null,\n\t\"product\" : \"5/1\",\n\t\"creditRange\": 700,\n\t\"docType\": \"12MonthsBankStatements\",\n\t\"dob\": null,\n\t\"military\": null,\n\t\"bankruptcy\": null,\n\t\"bankruptcyInfo\": null,\n\t\"foreclosureInfo\": null,\n\t\"userAddress\": {\n\t\t\"street\": null,\n\t\t\"zip\": null,\n\t\t\"city\": null\n\t},\n\t\"name\": \"Test New\",\n\t\"contact\": {\n\t\t\"phone\": \"555-555-5555\",\n\t\t\"email\": \"test@tester.com\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_c028fe52ff3f48b0bcd23914e5bfde9a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488982888406.25,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d94d5320587944bdb4975a42449e42c6",
+			"parentId": "fld_3aeb980bb2d84ee3934f1714558e7bb1",
+			"modified": 1498163922783,
+			"created": 1488982888407,
+			"url": "{{ base_url  }}/report",
+			"name": "Aurora (A|5875|80) + Highland (A+|5250|80)",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": " {\n\t\"loanType\": \"PURCHASE\",\n\t\"housing_history\": \"0x30\",\n\t\"propType\": \"2TO4UNITFAM\",\n\t\"propUse\": \"OwnerOccupied\",\n\t\"propLoc\": null,\n\t\"newHome\": null,\n\t\"ltv\": 70,\n\t\"loanTotal\": 2000000,\n\t\"foreign\": \"No\",\n\t\"realAgent\": null,\n\t\"realOpt\": null,\n\t\"purchasePrice\": 2000000,\n\t\"percentDown\": null,\n\t\"product\" : \"5/1\",\n\t\"creditRange\": 720,\n\t\"docType\": \"FullDoc\",\n\t\"dob\": null,\n\t\"military\": null,\n\t\"bankruptcy\": null,\n\t\"bankruptcyInfo\": null,\n\t\"foreclosureInfo\": null,\n\t\"userAddress\": {\n\t\t\"street\": null,\n\t\t\"zip\": null,\n\t\t\"city\": null\n\t},\n\t\"name\": \"Test New\",\n\t\"contact\": {\n\t\t\"phone\": \"555-555-5555\",\n\t\t\"email\": \"test@tester.com\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_d9f9df8237a049dc9362eac33a6af50c"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1498157669716,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_830eb96a066c4fc29f19294d6916fe18",
+			"parentId": "fld_3aeb980bb2d84ee3934f1714558e7bb1",
+			"modified": 1498163945215,
+			"created": 1498134165747,
+			"url": "{{ base_url }}/report",
+			"name": "Aurora (A|6615|80) + Highland (A+|5500|80)",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"loanType\": \"CASHOUT\",\n\t\"housing_history\": \"0x30\",\n\t\"propType\": \"LOWRISECONDO\",\n\t\"propUse\": \"OwnerOccupied\",\n\t\"propLoc\": null,\n\t\"newHome\": null,\n\t\"ltv\": 75,\n\t\"loanTotal\": 1000000,\n\t\"foreign\": \"No\",\n\t\"realAgent\": null,\n\t\"realOpt\": null,\n\t\"purchasePrice\": 2000000,\n\t\"percentDown\": null,\n\t\"product\" : \"5/1\",\n\t\"creditRange\": 700,\n\t\"docType\": \"FullDoc\",\n\t\"dob\": null,\n\t\"military\": null,\n\t\"bankruptcy\": null,\n\t\"bankruptcyInfo\": null,\n\t\"foreclosureInfo\": null,\n\t\"userAddress\": {\n\t\t\"street\": null,\n\t\t\"zip\": null,\n\t\t\"city\": null\n\t},\n\t\"name\": \"Test New\",\n\t\"contact\": {\n\t\t\"phone\": \"555-555-5555\",\n\t\t\"email\": \"test@tester.com\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_c028fe52ff3f48b0bcd23914e5bfde9a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1498157669766,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8bd38f945c94412aa9d299c01af213cd",
+			"parentId": "fld_42abf7e941434dd395e0b88f9f5253b2",
+			"modified": 1498157716054,
+			"created": 1489575590823,
+			"url": "{{ base_url }}/report",
+			"name": "None",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"loanType\": \"CASHOUT\",\n\t\"housing_history\": \"0x30\",\n\t\"propType\": \"LOWRISECONDO\",\n\t\"propUse\": \"OwnerOccupied\",\n\t\"propLoc\": null,\n\t\"newHome\": null,\n\t\"ltv\": 85,\n\t\"loanTotal\": 1000000,\n\t\"foreign\": \"No\",\n\t\"realAgent\": null,\n\t\"realOpt\": null,\n\t\"purchasePrice\": 2000000,\n\t\"percentDown\": null,\n\t\"product\" : \"5/1\",\n\t\"creditRange\": 700,\n\t\"docType\": \"FullDoc\",\n\t\"dob\": null,\n\t\"military\": null,\n\t\"bankruptcy\": null,\n\t\"bankruptcyInfo\": null,\n\t\"foreclosureInfo\": null,\n\t\"userAddress\": {\n\t\t\"street\": null,\n\t\t\"zip\": null,\n\t\t\"city\": null\n\t},\n\t\"name\": \"Test New\",\n\t\"contact\": {\n\t\t\"phone\": \"555-555-5555\",\n\t\t\"email\": \"test@tester.com\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_c028fe52ff3f48b0bcd23914e5bfde9a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1498157678474.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}
